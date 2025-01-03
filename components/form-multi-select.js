@@ -81,6 +81,11 @@ export class MultiSelect extends HTMLElement {
   }
 
   clear() {
-      this.querySelectorAll('.selected').forEach(tag => tag.classList.remove('selected'))
+        this.selectedItems = {}
+        this.updateSelectText()
+        const items = this.querySelectorAll('[name=select-options] input[type=checkbox]')
+        items.forEach(item => {
+            item.checked = false
+        })
   }
 }
