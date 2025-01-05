@@ -10,7 +10,7 @@ export class Badge extends HTMLElement {
             badgeColors[text] = colorPalette[Object.keys(badgeColors).length % colorPalette.length];
         }
 
-        this.classList.add('text-white', 'rounded-full', 'px-2', 'py-1', 'inline-block', 'text-sm', 'mr-1', 'mb-1', 'font-medium', 'badge')
+        this.classList.add('text-white', 'rounded-full', 'px-2', 'py-1', 'inline-block', 'text-sm', 'mr-1', 'mb-1', 'font-medium', 'badge', 'whitespace-nowrap')
         this.style.backgroundColor = badgeColors[text]
         this.setAttribute('role', 'span')
     }
